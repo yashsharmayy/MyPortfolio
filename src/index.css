@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@theme {
+  --font-heading: "Bebas Neue", sans-serif;
+  --font-body: "DM Sans", sans-serif;
+  --font-alt: "Oswald", sans-serif;
+}
+
+@theme {
+  --color-prime: #ffffff;
+  --color-prime2: #cfd1cc;
+  --color-prime3: #f2f2f2;
+  --color-secondary: #d0ff71;
+  --color-secondary3: #0bde66;
+  --color-gold-dark59: #8b6914;
+  --color-warm-black: #333333;
+  --color-bg-default: #1a1a1b;
+  --color-theme-blue: #5e67e6;
+}
+
+.bgvideo {
+  position: fixed;
+  opacity: 0.89;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+body {
+  background-color: var(--color-prime);
+  color: var(--color-prime);
+  font: var(--font-body);
+  box-sizing: border-box;
+  position: relative;
+}
+.btn {
+  text-align: center;
+  display: inline-block;
+  padding: 2px 2px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  background: var(--color-secondary);
+  left: 45%;
+  height: 1px;
+  bottom: 0;
+  transition: all 0.3s;
+  opacity: 1;
+}
+
+.btn:hover:before {
+  width: 100%;
+  left: 0;
+}
