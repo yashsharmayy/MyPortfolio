@@ -61,3 +61,28 @@ body {
   width: 100%;
   left: 0;
 }
+.storybtn {
+  position: relative;
+  overflow: hidden;
+}
+
+.btneffect {
+  position: absolute;
+  top: 60px;
+  left: -60px;
+  width: 120px;
+  height: 120px;
+  background: #a3e635;
+  border-radius: 50%;
+  transition: all 0.4s ease-in-out;
+  z-index: 0;
+}
+
+.storybtn:hover .btneffect {
+  top: -30px;
+  left: 0;
+  width: 170px;
+}
+.storybtn:hover a {
+  color: var(--color-bg-default);
+}

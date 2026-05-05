@@ -1,4 +1,5 @@
 import React from 'react'
+import heroimg from '../assets/heroimg1.png'
 
 const Herosec = () => {
 
@@ -21,8 +22,7 @@ const Herosec = () => {
                 <div className='w-55 h-75  md:w-90 md:h-125 overflow-hidden rounded-3xl'>
                     <img
                         className='w-full h-full object-cover'
-                        src="https://images.unsplash.com/photo-1673972249409-2c27a19205b3?q=80&w=687"
-                        alt="profile"
+                        src={heroimg} alt="profile"
                     />
                 </div>
 
