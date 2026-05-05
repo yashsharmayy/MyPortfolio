@@ -8,6 +8,7 @@ const App = () => {
       <video autoPlay muted loop className='bgvideo' src="..\src\assets\bg2.mp4"></video>
       <Nav />
       <Home />
+
     </div>
   )
 }

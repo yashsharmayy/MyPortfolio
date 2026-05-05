@@ -9,7 +9,7 @@ const Herosec = () => {
             <div className='w-full lg:mb-30 text-center md:text-left md:mb-10 '>
                 <h2 className='font-heading text-2xl md:text-4xl'>Yash Sharma</h2>
                 <h1 className='font-heading text-5xl md:text-7xl lg:text-9xl'>
-                    Front
+                    Frontend
                 </h1>
             </div>
 
