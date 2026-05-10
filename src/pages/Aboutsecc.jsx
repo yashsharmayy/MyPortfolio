@@ -39,7 +39,7 @@ const Aboutsec = () => {
 
 
     return (
-        <div className=' lg:h-screen flex p-10 lg:p-20 items-center'>
+        <div className=' h-full flex p-10 lg:p-20 overflow-x-hidden items-center'>
             <div className='lg:w-1/2 flex flex-col text-center items-center md:text-left md:items-start'>
                 <h1 className='font-heading text-5xl md:text-7xl '>
                     About me

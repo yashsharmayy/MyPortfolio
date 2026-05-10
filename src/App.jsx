@@ -1,15 +1,38 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Home from './pages/Home'
 import Nav from './components/Nav'
+import gsap from 'gsap'
 
 const App = () => {
 
-  const [dot, setdot] = useState(second)
+  const mousemove = (e) => {
+
+    gsap.to(".dot", {
+      x: e.clientX + 16,
+      y: e.clientY + 16,
+      duration: 0.8,
+      ease: "power2.out"
+    })
+
+  }
+
   return (
-    <div className='relative'>
 
+    <div
+      onMouseMove={mousemove}
+      className='relative w-full  overflow-hidden'
+    >
 
-      <video autoPlay muted loop className='bgvideo' src="..\src\assets\bg2.mp4"></video>
+      <div className="dot bg-secondary w-4 h-4 rounded-full fixed top-0 left-0 pointer-events-none z-500"></div>
+
+      <video
+        autoPlay
+        muted
+        loop
+        className='bgvideo'
+        src="../src/assets/bg2.mp4"
+      ></video>
+
       <Nav />
       <Home />
 
