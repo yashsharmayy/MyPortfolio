@@ -11,7 +11,7 @@ const App = () => {
       x: e.clientX + 16,
       y: e.clientY + 16,
       duration: 0.8,
-      ease: "power2.out"
+      ease: "power3.out"
     })
 
   }
