@@ -40,16 +40,16 @@ const Aboutsec = () => {
 
     return (
         <div className=' lg:h-screen flex p-10 lg:p-20 items-center'>
-            <div className='lg:w-1/2 '>
+            <div className='lg:w-1/2 flex flex-col text-center items-center md:text-left md:items-start'>
                 <h1 className='font-heading text-5xl md:text-7xl '>
                     About me
 
                 </h1>
 
-                <p className=' md:text-lg lg:text-xl mt-4  '>
+                <p className=' md:text-lg lg:text-xl mt-4 md:w-125 lg:w-full '>
                     Hi, I'm Yash — a frontend developer and digital designer passionate about building modern and impactful web experiences.
                 </p>
-                <div className='flex gap-6 my-4'>
+                <div className='flex md:flex-row flex-col gap-6 my-4'>
                     <div>
                         <h1 className=' my-2 font-alt text-6xl text-secondary'>{year}+</h1>
                         <p className='text-xl font-alt '>Years of Learning</p>
@@ -63,7 +63,7 @@ const Aboutsec = () => {
                         <p className='text-xl font-alt '>Technologies Learned</p>
                     </div>
                 </div>
-                <div className='my-8 flex gap-8'>
+                <div className='my-8 flex md:flex-row flex-col gap-8'>
                     <div>
                         <h2 className=' text-2xl font-alt' >Call Today:</h2>
                         <h3 className='text-lg'>+91 9717100000</h3>

@@ -50,7 +50,7 @@ const Survicesec = () => {
 
                 </h1>
 
-                <p className=' md:text-lg lg:text-xl mt-4  '>
+                <p className=' md:text-lg lg:text-xl mt-4  w-100 lg:w-full'>
                     I develop responsive websites and manage website hosting to ensure smooth performance.
                 </p>
                 {servicesData.map((section, idx) => {
