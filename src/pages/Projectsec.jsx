@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../components/Button";
+import Card from "../components/Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -66,78 +67,10 @@ const Projectsec = () => {
             <section className="cards-section py-20 flex justify-center">
 
                 <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165">
-
-                    {/* CARD 1 */}
-                    <div className="card md:absolute relative top-10 rounded-3xl overflow-hidden shadow-2xl">
-
-                        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1472214103451-9374bd1c798e" />
-
-                        {/* Desktop overlay text */}
-                        <div className="hidden md:flex absolute top-10 bg-black/20 flex-col justify-end p-6">
-                            <h2 className="text-3xl font-bold">Project 1</h2>
-                            <p className="text-sm opacity-80">
-                                Nature photography website design
-                            </p>
-                        </div>
-
-                    </div>
-
-                    {/* Mobile text */}
-                    <div className="md:hidden mb-6 relative mt-20">
-                        <h2 className="text-2xl font-bold">Project 1</h2>
-                        <p className="opacity-80">Nature photography website design</p>
-                    </div>
-
-                    {/* CARD 2 */}
-                    <div className="card md:absolute relative top-10 translate-y-2 rounded-3xl overflow-hidden shadow-2xl">
-
-                        <img className="w-full h-full object-cover" src="https://plus.unsplash.com/premium_photo-1673697239981-389164b7b87f" />
-
-                        <div className="hidden md:flex absolute top-10 bg-black/20 flex-col justify-end p-6">
-                            <h2 className="text-3xl font-bold">Project 2</h2>
-                            <p className="text-sm opacity-80">UI/UX design system</p>
-                        </div>
-
-                    </div>
-
-                    <div className="md:hidden mb-6 relative mt-20">
-                        <h2 className="text-2xl font-bold">Project 2</h2>
-                        <p className="opacity-80">UI/UX design system</p>
-                    </div>
-
-                    {/* CARD 3 */}
-                    <div className="card md:absolute relative top-10 translate-y-4 rounded-3xl overflow-hidden shadow-2xl">
-
-                        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1469474968028-56623f02e42e" />
-
-                        <div className="hidden md:flex absolute top-10 bg-black/20 flex-col justify-end p-6">
-                            <h2 className="text-3xl font-bold">Project 3</h2>
-                            <p className="text-sm opacity-80">Creative web animation</p>
-                        </div>
-
-                    </div>
-
-                    <div className="md:hidden mb-6  relative mt-20">
-                        <h2 className="text-2xl font-bold">Project 3</h2>
-                        <p className="opacity-80">Creative web animation</p>
-                    </div>
-
-                    {/* CARD 4 */}
-                    <div className="card md:absolute relative  top-10 translate-y-6  rounded-3xl overflow-hidden shadow-2xl">
-
-                        <img className="w-full h-full object-cover" src="https://images.unsplash.com/photo-1501785888041-af3ef285b470" />
-
-                        <div className="hidden md:flex absolute top-10 bg-black/20 flex-col justify-end p-6">
-                            <h2 className="text-3xl font-bold">Project 4</h2>
-                            <p className="text-sm opacity-80">Brand identity design</p>
-                        </div>
-
-                    </div>
-
-                    <div className="md:hidden relative  mt-20">
-                        <h2 className="text-2xl font-bold">Project 4</h2>
-                        <p className="opacity-80">Brand identity design</p>
-                    </div>
+                    <Card proname={"Project 1"} content={"Nature photography website design"} img={"https://images.unsplash.com/photo-1472214103451-9374bd1c798e"} />
+                    <Card proname={"Project 2"} content={"UI/UX design system"} img={"https://plus.unsplash.com/premium_photo-1673697239981-389164b7b87f"} />
+                    <Card proname={"Project 3"} content={"Creative web animation"} img={"https://images.unsplash.com/photo-1469474968028-56623f02e42e"} />
+                    <Card proname={"Project 4"} content={"Brand identity design"} img={"https://images.unsplash.com/photo-1501785888041-af3ef285b470"} />
 
                 </div>
             </section>

@@ -1,10 +1,13 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { hoverContext } from './Contexthover'
 
 const Dropdown = ({ heading, idx, content1, content2, content3, content4 }) => {
+    const { setActive } = useContext(hoverContext)
     const [open, setOpen] = useState(false)
 
+
     return (
-        <div className="text-white max-w-xl ">
+        <div onMouseOver={() => setActive(idx)} onMouseLeave={() => setActive(0)} className="text-white max-w-xl ">
 
             <div className="border-b border-gray-600 py-4 cursor-pointer">
 
