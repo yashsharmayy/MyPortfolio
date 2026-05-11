@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Dropdown from '../components/Dropdown'
+import Button from '../components/Button'
 
 const Aboutsec = () => {
     const [year, setYear] = useState(0)
@@ -96,11 +97,7 @@ const Aboutsec = () => {
                     </a>
 
                 </div>
-                <button className='storybtn relative hover:scale-99  overflow-hidden font-heading py-2 px-8  border-secondary border my-10 rounded-full text-3xl text-secondary'>
-
-                    <a href="#" className='relative z-10'>my Story</a>
-                    <div className='btneffect  absolute transition-all ease-in-out duration-300 w-40 h-25 top-13 -left-25 rounded-full bg-secondary'></div>
-                </button>
+                <Button text={"my story"} />
 
             </div>
             <div className='lg:w-1/2'></div>

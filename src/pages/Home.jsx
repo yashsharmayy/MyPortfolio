@@ -2,6 +2,7 @@ import React from 'react'
 import Herosec from './Herosec'
 import Survicesec from './survicesec'
 import Aboutsec from './Aboutsecc'
+import Projectsec from './Projectsec'
 
 const Home = () => {
     return (
@@ -9,6 +10,7 @@ const Home = () => {
             <Herosec />
             <Survicesec />
             <Aboutsec />
+            <Projectsec />
         </div>
     )
 }

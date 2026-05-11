@@ -60,7 +60,7 @@ const Herosec = () => {
                 </h1>
             </div>
 
-            <div ref={heroimgRef} className='relative  lg:absolute my-10 lg:my-0'>
+            <div ref={heroimgRef} className='relative shadow-2xl lg:absolute my-10 lg:my-0'>
 
                 <div className='absolute z-10 w-16 h-16 md:w-20 md:h-20 rounded-full bg-secondary text-bg-default flex items-center justify-center text-xl md:text-2xl -left-6 -bottom-6'>
                     Hi

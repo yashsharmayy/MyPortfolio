@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Home from './pages/Home'
 import Nav from './components/Nav'
 import gsap from 'gsap'
 
 const App = () => {
+
+
 
   const mousemove = (e) => {
 
@@ -23,7 +25,7 @@ const App = () => {
       className='relative w-full  overflow-hidden'
     >
 
-      <div className="dot bg-secondary w-4 h-4 rounded-full fixed top-0 left-0 pointer-events-none z-500"></div>
+      <div className="hidden md:block dot bg-secondary w-4 h-4 rounded-full fixed top-0 left-0 pointer-events-none z-500"></div>
 
       <video
         autoPlay
