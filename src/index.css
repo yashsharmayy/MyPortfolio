@@ -1,5 +1,19 @@
 @import "tailwindcss";
 
+/* lenis install */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 @theme {
   --font-heading: "Bebas Neue", sans-serif;
   --font-body: "DM Sans", sans-serif;

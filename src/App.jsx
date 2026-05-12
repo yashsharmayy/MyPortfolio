@@ -3,6 +3,11 @@ import Home from './pages/Home'
 import Nav from './components/Nav'
 import gsap from 'gsap'
 import { hoverContext } from './components/Contexthover'
+import Lenis from 'lenis'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+gsap.registerPlugin(ScrollTrigger)
+
 
 const App = () => {
 
@@ -18,6 +23,24 @@ const App = () => {
     })
 
   }
+  useEffect(() => {
+
+    const lenis = new Lenis({
+      duration: 1.2,
+      smoothWheel: true,
+    })
+
+    lenis.on('scroll', ScrollTrigger.update)
+
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000)
+    })
+
+    gsap.ticker.lagSmoothing(0)
+
+  }, [])
+
+
 
 
   return (
