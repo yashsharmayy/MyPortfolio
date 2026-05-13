@@ -50,7 +50,7 @@ const Projectsec = () => {
     }, []);
 
     return (
-        <div className="text-white h-full">
+        <div className="text-white h-full my-8">
 
             {/* Top */}
             <section className="flex flex-col items-start p-10 md:p-20">

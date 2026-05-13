@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Dropdown from '../components/Dropdown'
 import Button from '../components/Button'
+import Icons from '../components/Icons'
 
 const Aboutsec = () => {
     const [year, setYear] = useState(0)
@@ -74,30 +75,11 @@ const Aboutsec = () => {
                         <h3 className='text-lg'>weblysite1804@gmail.com</h3>
                     </div>
                 </div>
-                <div className="flex gap-6 mt-6 text-2xl text-white">
+                <Icons color={'white'} />
+                <div className='my-10'>
 
-                    <a href="https://www.instagram.com/weblysite/" target="_blank" rel="noreferrer"
-                        className="hover:text-pink-500 transition">
-                        <i className="fa-brands fa-instagram"></i>
-                    </a>
-
-                    <a href="https://www.youtube.com/@WeblySite00" target="_blank" rel="noreferrer"
-                        className="hover:text-red-500 transition">
-                        <i className="fa-brands fa-youtube"></i>
-                    </a>
-
-                    <a href="https://www.linkedin.com/in/yash-sharma-b4a3923b5/" target="_blank" rel="noreferrer"
-                        className="hover:text-blue-500 transition">
-                        <i className="fa-brands fa-linkedin"></i>
-                    </a>
-
-                    <a href="https://github.com/yashsharmayy" target="_blank" rel="noreferrer"
-                        className="hover:text-gray-400 transition">
-                        <i className="fa-brands fa-github"></i>
-                    </a>
-
+                    <Button text={"my story"} />
                 </div>
-                <Button text={"my story"} />
 
             </div>
             <div className='lg:w-1/2'></div>

@@ -82,7 +82,7 @@ const Skillset = () => {
         },
 
         {
-            name: "Mysql",
+            name: "MySQL",
             img: "https://cdn.freebiesupply.com/logos/large/2x/mysql-5-logo-svg-vector.svg"
         },
 
@@ -102,11 +102,11 @@ const Skillset = () => {
             {/* LEFT SIDE */}
             <div
                 ref={leftRef}
-                className='w-1/2 h-full md:min-h-screen  text-secondary flex  items-center p-4 md:p-20'
+                className='w-1/2 h-full md:min-h-screen  flex  items-center p-4 md:p-20'
             >
 
                 <div>
-                    <h1 className='text-4xl md:text-7xl font-bold'>
+                    <h1 className='text-4xl md:text-7xl  text-secondary font-bold'>
                         Tech Stack
                     </h1>
 

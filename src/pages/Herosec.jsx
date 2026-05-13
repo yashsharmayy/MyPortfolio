@@ -51,7 +51,7 @@ const Herosec = () => {
     }, []);
 
     return (
-        <div className='w-full h-full  mt-25  overflow-x-hidden flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 lg:px-20 h-auto min-h-[88vh]'>
+        <div className='w-full   mt-25  overflow-x-hidden flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 lg:px-20 h-auto min-h-[88vh]'>
 
             <div className='w-full lg:mb-30 text-center md:text-left md:mb-10 '>
                 <h2 className='font-heading text-2xl md:text-4xl'>Yash Sharma</h2>
