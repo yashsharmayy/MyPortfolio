@@ -101,7 +101,11 @@ const App = () => {
         src="../src/assets/bg2.mp4"
       ></video>
 
-      <Nav />
+      <div className='w-full flex fixed z-50 items-center justify-center'>
+
+        <Nav />
+      </div>
+
       <Home />
 
     </div>

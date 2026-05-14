@@ -99,7 +99,6 @@ const Skillset = () => {
             className='flex relative md:flex-row flex-col items-center md:items-start'
         >
 
-            {/* LEFT SIDE */}
             <div
                 ref={leftRef}
                 className='w-1/2 h-full md:min-h-screen  flex  items-center p-4 md:p-20'
@@ -118,8 +117,7 @@ const Skillset = () => {
 
             </div>
 
-            {/* RIGHT SIDE */}
-            <div className='w-1/2 md:ml-auto min-h-[300vh] flex flex-col justify-center gap-40 px-2 md:px-20'>
+            <div className='w-1/2 md:ml-auto min-h-[250vh] flex flex-col justify-center gap-40 px-2 md:px-20'>
 
                 {skills.map((skill, index) => (
 
