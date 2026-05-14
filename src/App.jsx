@@ -66,27 +66,29 @@ const App = () => {
         {Active == 1 && (
           <img
             className='w-full h-full object-cover object-center'
-            src="https://images.unsplash.com/photo-1421789665209-c9b2a435e3dc?w=400"
+            src=".\src\assets\subimg01.png"
             alt=""
           />
         )}
         {Active == 2 && (
           <img
             className='w-full h-full object-cover object-center'
-            src='https://plus.unsplash.com/premium_photo-1711434824963-ca894373272e?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bmF0dXJlfGVufDB8fDB8fHww' alt=""
+            src=".\src\assets\subimg02.png"
+            alt=""
           />
         )}
         {Active == 3 && (
           <img
             className='w-full h-full object-cover object-center'
-            src="https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=765&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src=".\src\assets\subimg03.png"
             alt=""
           />
         )}
         {Active == 4 && (
           <img
             className='w-full h-full object-cover object-center'
-            src='https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fG5hdHVyZXxlbnwwfHwwfHx8MA%3D%3D' alt=""
+            src=".\src\assets\subimg04.png"
+            alt=""
           />
         )}
 

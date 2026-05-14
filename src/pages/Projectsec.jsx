@@ -66,11 +66,15 @@ const Projectsec = () => {
             {/* Cards */}
             <section className="cards-section py-20 flex justify-center">
 
-                <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165">
-                    <Card proname={"Project 1"} content={"Nature photography website design"} img={"https://images.unsplash.com/photo-1472214103451-9374bd1c798e"} />
-                    <Card proname={"Project 2"} content={"UI/UX design system"} img={"https://plus.unsplash.com/premium_photo-1673697239981-389164b7b87f"} />
-                    <Card proname={"Project 3"} content={"Creative web animation"} img={"https://images.unsplash.com/photo-1469474968028-56623f02e42e"} />
-                    <Card proname={"Project 4"} content={"Brand identity design"} img={"https://images.unsplash.com/photo-1501785888041-af3ef285b470"} />
+                <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165 overflow-hidden">
+                    <Card proname={"Aurum Luxe"} content={"Aurum Luxe is a modern jewellery website built with React, Tailwind CSS, and GSAP. It features a luxurious design, smooth animations, and a fully responsive layout for all devices."}
+                        img={"./src/assets/pro1.png"} />
+                    <Card proname={"GYM_BRO"} content={"A fully responsive gym website developed using React, enhanced with GSAP animations to deliver a dynamic and visually appealing user experience."}
+                        img={"./src/assets/pro2.png"} />
+                    <Card proname={"Movie Masalaa"} content={"This is a Movie app in which you can search movie and its details , it,s a fully react based project"}
+                        img={"./src/assets/pro3.png"} />
+                    <Card proname={"Project 4"} content={"Brand identity design"}
+                        img={"./src/assets/pro4.png"} />
 
                 </div>
             </section>
