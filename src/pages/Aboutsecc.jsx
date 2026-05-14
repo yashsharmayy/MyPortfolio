@@ -3,7 +3,7 @@ import Dropdown from '../components/Dropdown'
 import Button from '../components/Button'
 import Icons from '../components/Icons'
 
-const Aboutsec = () => {
+const Aboutsec = ({ w = "1/2" }) => {
     const [year, setYear] = useState(0)
     const [projects, setProjects] = useState(0)
     const [tech, setTech] = useState(0)
@@ -33,7 +33,7 @@ const Aboutsec = () => {
             }
 
         }, 80)
-        console.log(y, p, t);
+
 
 
         return () => clearInterval(interval)
@@ -42,7 +42,7 @@ const Aboutsec = () => {
 
     return (
         <div className=' h-full flex p-10 lg:p-20 overflow-x-hidden items-center'>
-            <div className='lg:w-1/2 flex flex-col text-center items-center md:text-left md:items-start'>
+            <div className={`lg:w-${w} flex flex-col text-center items-center md:text-left md:items-start`}>
                 <h1 className='font-heading text-5xl md:text-7xl '>
                     About me
 
@@ -78,11 +78,12 @@ const Aboutsec = () => {
                 <Icons color={'white'} />
                 <div className='my-10'>
 
-                    <Button text={"my story"} />
+                    <Button link={"/about"} text={"my story"} />
                 </div>
 
             </div>
-            <div className='lg:w-1/2'></div>
+
+
         </div>
     )
 }

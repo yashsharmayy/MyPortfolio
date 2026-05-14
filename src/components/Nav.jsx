@@ -143,23 +143,23 @@ const Nav = () => {
                 <ul className='navbar hidden md:flex  mx-2 gap-6 items-center'>
 
                     <li className='cursor-pointer btn'>
-                        Home
+                        <Link to="/">Home</Link>
                     </li>
 
                     <li className='cursor-pointer btn'>
-                        About
+                        <Link to="/about">About</Link>
                     </li>
 
                     <li className='cursor-pointer btn'>
-                        Project
+                        <Link to="/project">Project</Link>
                     </li>
 
                     <li className='cursor-pointer btn'>
-                        Services
+                        <Link to="/service">Services</Link>
                     </li>
 
                     <button className='px-6 py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                        Contact
+                        <Link to="/contact">Contact</Link>
                     </button>
 
                 </ul>
@@ -173,19 +173,19 @@ const Nav = () => {
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            <Link to="/About">About</Link>
+                            <Link to="/about">About</Link>
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            <Link to="/Project">Project</Link>
+                            <Link to="/project">Project</Link>
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            <Link to="/Service">Services</Link>
+                            <Link to="/service">Services</Link>
                         </li>
 
                         <button className='px-6 py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                            <Link to="/Contact">Contact</Link>
+                            <Link to="/contact">Contact</Link>
                         </button>
 
                     </ul>

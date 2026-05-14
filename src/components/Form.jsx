@@ -128,9 +128,7 @@ const Form = () => {
                     </div>
 
                     {/* Submit Button */}
-                    <button type="submit">
-                        <Button text={"Submit"} />
-                    </button>
+                    <Button text={"Submit"} type="submit" />
                 </div>
 
             </form>

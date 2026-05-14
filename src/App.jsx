@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from 'react'
-import Home from './pages/Home'
 import Nav from './components/Nav'
 import gsap from 'gsap'
 import { hoverContext } from './components/Contexthover'
@@ -9,7 +8,10 @@ import Imgcomp from './components/Imgcomp'
 import Pagetransiton from './components/pagetransiton'
 import { Routes, Route } from 'react-router-dom'
 import About from './pages/main_page/About'
-
+import Project from './pages/main_page/Project'
+import Service from './pages/main_page/Service'
+import Contact from './pages/main_page/Contact'
+import Home from './pages/main_page/Home'
 
 
 gsap.registerPlugin(ScrollTrigger)
@@ -106,7 +108,7 @@ const App = () => {
         muted
         loop
         className='bgvideo'
-        src="../src/assets/bg2.mp4"
+        src="src/assets/bg2.mp4"
       ></video>
       <Pagetransiton />
 
@@ -118,7 +120,10 @@ const App = () => {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/About" element={<About />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/service" element={<Service />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
 
 

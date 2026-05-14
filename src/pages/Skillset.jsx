@@ -12,13 +12,12 @@ const Skillset = () => {
 
     useEffect(() => {
 
-        // PIN LEFT SECTION
-
-
-        // SKILL ANIMATION
+        let trigger
 
         if (window.innerWidth >= 820) {
-            const trigger = ScrollTrigger.create({
+
+
+            trigger = ScrollTrigger.create({
                 trigger: sectionRef.current,
                 start: "top top",
                 end: "bottom bottom",
