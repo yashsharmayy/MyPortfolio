@@ -5,12 +5,18 @@ import gsap from 'gsap'
 import { hoverContext } from './components/Contexthover'
 import Lenis from 'lenis'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import Imgcomp from './components/Imgcomp'
+import Pagetransiton from './components/pagetransiton'
+import { Routes, Route } from 'react-router-dom'
+import About from './pages/main_page/About'
+
+
 
 gsap.registerPlugin(ScrollTrigger)
 
 
 const App = () => {
-
+  const { prohover, setprohover } = useContext(hoverContext)
   const { Active, setActive } = useContext(hoverContext);
   const mousemove = (e) => {
 
@@ -54,46 +60,46 @@ const App = () => {
         className={`
     hidden md:block dot bg-secondary overflow-hidden fixed top-0 left-0 pointer-events-none z-500
 
+    ${prohover ? "w-12 h-12 rounded-full  transition-all duration-150 ease-in-out" : ""}
     
 
     ${Active == 0
-            ? "w-4 h-4 rounded-full "
+            ? "w-4 h-4 rounded-full"
             : "w-45 h-25  translate-x-20 -translate-y-10 rotate-16  rounded-xl transition-all  duration-150 ease-in-out"
           }
   `}
       >
+        {
+          prohover && (
+            <div className='flex  justify-center items-center '>
+              <i className=" fa-solid fa-arrow-up-right-from-square p-0 text-2xl mt-3"></i>
+            </div>
+          )
+        }
 
-        {Active == 1 && (
-          <img
-            className='w-full h-full object-cover object-center'
-            src=".\src\assets\subimg01.png"
-            alt=""
-          />
-        )}
-        {Active == 2 && (
-          <img
-            className='w-full h-full object-cover object-center'
-            src=".\src\assets\subimg02.png"
-            alt=""
-          />
-        )}
-        {Active == 3 && (
-          <img
-            className='w-full h-full object-cover object-center'
-            src=".\src\assets\subimg03.png"
-            alt=""
-          />
-        )}
-        {Active == 4 && (
-          <img
-            className='w-full h-full object-cover object-center'
-            src=".\src\assets\subimg04.png"
-            alt=""
-          />
-        )}
+        {
+          Active == 1 && (
+            <Imgcomp num={1} />
+          )
+        }
+        {
+          Active == 2 && (
+            <Imgcomp num={2} />
+          )
+        }
+        {
+          Active == 3 && (
+            <Imgcomp num={3} />
+          )
+        }
+        {
+          Active == 4 && (
+            <Imgcomp num={4} />
+          )
+        }
 
 
-      </div>
+      </div >
 
       <video
         autoPlay
@@ -102,15 +108,22 @@ const App = () => {
         className='bgvideo'
         src="../src/assets/bg2.mp4"
       ></video>
+      <Pagetransiton />
 
       <div className='w-full flex fixed z-50 items-center justify-center'>
 
         <Nav />
       </div>
 
-      <Home />
 
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/About" element={<About />} />
+      </Routes>
+
+
+
+    </div >
   )
 }
 

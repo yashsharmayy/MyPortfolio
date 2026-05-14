@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import heroimg from '../assets/heroimg4.png'
 import gsap from 'gsap'
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
 
@@ -96,17 +97,22 @@ const Nav = () => {
             gsap.to(".menu", {
                 y: 20,
                 opacity: 1,
+                width: "60%",
+                pointerEvents: "auto",
                 duration: 0.4,
-                width: "60%"
             })
         } else {
             gsap.to(".menu", {
                 y: -20,
                 width: "0%",
-                opacity: 0
+                opacity: 0,
+                pointerEvents: "none",
+                duration: 0.4,
             })
         }
     }
+
+
 
 
 
@@ -158,27 +164,28 @@ const Nav = () => {
 
                 </ul>
                 <div
-                    className={`menu flex-col absolute w-0 opacity-0 top-0 px-20 mt-15 bg-black/90  rounded-3xl p-6 `}
-                >       <ul className='flex flex-col  gap-6 items-center'>
-
+                    className={`menu flex-col absolute top-0 px-20 mt-15 bg-black/90 rounded-3xl p-6
+                         opacity-0 w-0 pointer-events-none`}
+                >
+                    <ul className='flex flex-col  gap-6 items-center'>
                         <li className='cursor-pointer btn'>
-                            Home
+                            <Link to="/">Home</Link>
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            About
+                            <Link to="/About">About</Link>
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            Project
+                            <Link to="/Project">Project</Link>
                         </li>
 
                         <li className='cursor-pointer btn'>
-                            Services
+                            <Link to="/Service">Services</Link>
                         </li>
 
                         <button className='px-6 py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                            Contact
+                            <Link to="/Contact">Contact</Link>
                         </button>
 
                     </ul>

@@ -27,7 +27,7 @@ const Footer = () => {
                             href="tel:+911234567890"
                             className="text-xl font-semibold"
                         >
-                            +91 9717136085
+                            +91 8750634117
                         </a>
                     </div>
 

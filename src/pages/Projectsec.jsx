@@ -67,14 +67,31 @@ const Projectsec = () => {
             <section className="cards-section py-20 flex justify-center">
 
                 <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165 overflow-hidden">
-                    <Card proname={"Aurum Luxe"} content={"Aurum Luxe is a modern jewellery website built with React, Tailwind CSS, and GSAP. It features a luxurious design, smooth animations, and a fully responsive layout for all devices."}
-                        img={"./src/assets/pro1.png"} />
-                    <Card proname={"GYM_BRO"} content={"A fully responsive gym website developed using React, enhanced with GSAP animations to deliver a dynamic and visually appealing user experience."}
-                        img={"./src/assets/pro2.png"} />
-                    <Card proname={"Movie Masalaa"} content={"This is a Movie app in which you can search movie and its details , it,s a fully react based project"}
-                        img={"./src/assets/pro3.png"} />
-                    <Card proname={"Project 4"} content={"Brand identity design"}
-                        img={"./src/assets/pro4.png"} />
+                    <a href="https://yashsharmayy.github.io/Aurum_Luxe/">
+                        <Card proname={"Aurum Luxe"} content={"Aurum Luxe is a modern jewellery website built with React, Tailwind CSS, and GSAP. It features a luxurious design, smooth animations, and a fully responsive layout for all devices."}
+                            img={"./src/assets/pro1.png"} />
+
+                    </a>
+                    <a href="https://yashsharmayy.github.io/GYM_BRO/">
+
+                        <Card proname={"GYM_BRO"} content={"A fully responsive gym website developed using React, enhanced with GSAP animations to deliver a dynamic and visually appealing user experience."}
+                            img={"./src/assets/pro2.png"} />
+
+                    </a>
+                    <a href="https://yashsharmayy.github.io/MovieMasalaa/#/">
+
+
+                        <Card proname={"Movie Masalaa"} content={"This is a Movie app in which you can search movie and its details , it,s a fully react based project"}
+                            img={"./src/assets/pro3.png"} />
+
+                    </a>
+
+                    <a href="https://yashsharmayy.github.io/sundown/">
+
+                        <Card proname={"Sundown Studio Clone"} content={"A modern and visually engaging frontend clone inspired by the Sundown Studio website. Built using HTML, CSS, and JavaScript with smooth animations, responsive layouts, and interactive UI elements."}
+                            img={"./src/assets/pro4.png"} />
+                    </a>
+
 
                 </div>
             </section>

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { hoverContext } from './Contexthover'
 
 const Card = ({ proname, content, img }) => {
+
+    const { setprohover } = useContext(hoverContext)
+
     return (
-        <div>
-            <div className="card md:absolute relative  top-10 translate-y-4 rounded-3xl overflow-hidden shadow-2xl">
+        <div onMouseOver={() => setprohover(true)} onMouseLeave={() => setprohover(false)} >
+            <div className="card md:absolute relative z-20  top-10 translate-y-4 rounded-3xl overflow-hidden shadow-2xl">
 
                 <img className="w-full h-full object-cover" src={img} />
 
