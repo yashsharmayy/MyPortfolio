@@ -8,7 +8,7 @@ import { BrowserRouter } from 'react-router-dom'
 createRoot(document.getElementById('root')).render(
 
   <HoverProvider>
-    <BrowserRouter>
+    <BrowserRouter basename='MyPortfolio'>
       <App />
     </BrowserRouter>
   </HoverProvider>

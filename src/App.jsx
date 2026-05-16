@@ -12,7 +12,7 @@ import Service from './pages/main_page/Service'
 import Contact from './pages/main_page/Contact'
 import Home from './pages/main_page/Home'
 import Transition from './components/Transition'
-
+import ScrollToTop from './components/SrollToTop'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -116,7 +116,7 @@ const App = () => {
         <Nav />
       </div>
 
-
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

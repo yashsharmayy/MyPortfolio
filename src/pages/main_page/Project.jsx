@@ -34,7 +34,7 @@ const Project = () => {
                         {/* Card 1 */}
                         <Procard
                             link={"https://yashsharmayy.github.io/Learnify/"}
-                            proimg={"subimg03"}
+                            proimg={'../assets/subimg03.png'}
                             subname={"HTML • CSS • JavaScript • GSAP"}
                             name={"Liernify"}
                             discription={
@@ -43,7 +43,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/Frontend_project/snake-game/snake.html"}
-                            proimg={"subimg04"}
+                            proimg={'../assets/subimg03.png'}
                             subname={"JavaScript"}
                             name={"Snake Game"}
                             discription={
@@ -51,7 +51,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/coffee/"}
-                            proimg={"subimg001"}
+                            proimg={'../assets/subimg03.png'}
                             subname={"HTML • CSS • JavaScript"}
                             name={"Coffee Website"}
                             discription={
@@ -60,7 +60,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/Frontend_project/weather%20app/weather.html"}
-                            proimg={"subimg02"}
+                            proimg={'../assets/subimg03.png'}
                             subname={"HTML • CSS • JavaScript"}
                             name={"Weather App"}
                             discription={

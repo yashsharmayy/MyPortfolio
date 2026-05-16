@@ -9,7 +9,7 @@ const Procard = ({ link = "/", proimg, subname, name, discription }) => {
         >
             <div className="overflow-hidden rounded-4xl">
                 <img
-                    src={`/src/assets/${proimg}.png`}
+                    src={proimg}
                     alt={name}
                     className="w-full h-36 md:h-88 object-cover group-hover:scale-105 duration-500"
                 />
