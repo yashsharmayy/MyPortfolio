@@ -4,7 +4,7 @@ const Imgcomp = ({ imgpath }) => {
     return (
         <img
             className='w-full h-full object-cover object-center'
-            src={img} alt=""
+            src={imgpath} alt=""
         />
     )
 }
