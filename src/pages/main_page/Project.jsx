@@ -4,6 +4,12 @@ import Footer from '../Footer'
 import Procard from '../../components/Procard'
 import gsap from 'gsap'
 
+import subimg001 from '../../assets/subimg001.png'
+import subimg02 from '../../assets/subimg02.png'
+import subimg03 from '../../assets/subimg03.png'
+import subimg04 from '../../assets/subimg04.png'
+
+
 const Project = () => {
     const headRef = useRef()
     useEffect(() => {
@@ -34,7 +40,7 @@ const Project = () => {
                         {/* Card 1 */}
                         <Procard
                             link={"https://yashsharmayy.github.io/Learnify/"}
-                            proimg={'../assets/subimg03.png'}
+                            proimg={subimg03}
                             subname={"HTML • CSS • JavaScript • GSAP"}
                             name={"Liernify"}
                             discription={
@@ -43,7 +49,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/Frontend_project/snake-game/snake.html"}
-                            proimg={'../assets/subimg03.png'}
+                            proimg={subimg04}
                             subname={"JavaScript"}
                             name={"Snake Game"}
                             discription={
@@ -51,7 +57,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/coffee/"}
-                            proimg={'../assets/subimg03.png'}
+                            proimg={subimg001}
                             subname={"HTML • CSS • JavaScript"}
                             name={"Coffee Website"}
                             discription={
@@ -60,7 +66,7 @@ const Project = () => {
                         />
                         <Procard
                             link={"https://yashsharmayy.github.io/Frontend_project/weather%20app/weather.html"}
-                            proimg={'../assets/subimg03.png'}
+                            proimg={subimg02}
                             subname={"HTML • CSS • JavaScript"}
                             name={"Weather App"}
                             discription={
