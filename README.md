@@ -15,7 +15,7 @@ The website includes smooth page transitions, advanced animations, custom cursor
 
 # 📸 Preview
 
-![Portfolio Preview](./src/assets/pro1.png)
+![Portfolio Preview](./src/assets/Portfolioimg.png)
 
 ---
 
@@ -166,16 +166,6 @@ A responsive weather application using API integration to display real-time weat
 ## 🐍 Snake Game
 
 Classic snake game built using JavaScript with game logic and DOM manipulation.
-
----
-
-## Router Setup
-
-```jsx
-<HashRouter>
-  <App />
-</HashRouter>
-```
 
 ---
 
