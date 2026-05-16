@@ -7,7 +7,7 @@ import Card from "../components/Card";
 gsap.registerPlugin(ScrollTrigger);
 
 
-const Projectsec = () => {
+const Projectsec = ({ hide = "" }) => {
     useEffect(() => {
         const cards = gsap.utils.toArray(".card");
 
@@ -96,7 +96,7 @@ const Projectsec = () => {
                 </div>
             </section>
             <section className="w-full flex m-auto md:my-20  justify-center">
-                <div className="my-10">
+                <div className={`my-10 ${hide} `}>
 
                     <Button text={"Browse all projects"} />
                 </div>

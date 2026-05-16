@@ -1,8 +1,15 @@
 import React from 'react'
+import Contectsec from '../Contectsec'
+import Footer from '../Footer'
+import Heroimg from '../../components/Heroimg'
 
 const Contact = () => {
     return (
-        <div>Contact</div>
+        <div className='pt-20'>
+
+            <Contectsec />
+            <Footer />
+        </div>
     )
 }
 

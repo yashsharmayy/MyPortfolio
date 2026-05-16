@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react'
 import Dropdown from '../components/Dropdown'
 import Button from '../components/Button'
 import Icons from '../components/Icons'
+import Heading from '../components/Heading'
 
-const Aboutsec = ({ w = "1/2" }) => {
+const Aboutsec = ({ w = "1/2", hide = "" }) => {
     const [year, setYear] = useState(0)
     const [projects, setProjects] = useState(0)
     const [tech, setTech] = useState(0)
@@ -43,14 +44,7 @@ const Aboutsec = ({ w = "1/2" }) => {
     return (
         <div className=' h-full flex p-10 lg:p-20 overflow-x-hidden items-center'>
             <div className={`lg:w-${w} flex flex-col text-center items-center md:text-left md:items-start`}>
-                <h1 className='font-heading text-5xl md:text-7xl '>
-                    About me
-
-                </h1>
-
-                <p className=' md:text-lg lg:text-xl mt-4 md:w-125 lg:w-full '>
-                    Hi, I'm Yash — a frontend developer and digital designer passionate about building modern and impactful web experiences.
-                </p>
+                <Heading head={"About me"} para={" Hi, I'm Yash — a frontend developer and digital designer passionate about building modern and impactful web experiences."} />
                 <div className='flex md:flex-row flex-col gap-6 my-4'>
                     <div>
                         <h1 className=' my-2 font-alt text-6xl text-secondary'>{year}+</h1>
@@ -68,7 +62,7 @@ const Aboutsec = ({ w = "1/2" }) => {
                 <div className='my-8 flex md:flex-row flex-col gap-8'>
                     <div>
                         <h2 className=' text-2xl font-alt' >Call Today:</h2>
-                        <h3 className='text-lg'>+91 9717100000</h3>
+                        <h3 className='text-lg'>+91 8750634117</h3>
                     </div>
                     <div>
                         <h2 className=' text-2xl font-alt' >Email:</h2>
@@ -76,7 +70,7 @@ const Aboutsec = ({ w = "1/2" }) => {
                     </div>
                 </div>
                 <Icons color={'white'} />
-                <div className='my-10'>
+                <div className={`my-10 ${hide} `}>
 
                     <Button link={"/about"} text={"my story"} />
                 </div>

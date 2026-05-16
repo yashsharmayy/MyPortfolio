@@ -142,25 +142,30 @@ const Nav = () => {
                 {/* Nav */}
                 <ul className='navbar hidden md:flex  mx-2 gap-6 items-center'>
 
-                    <li className='cursor-pointer btn'>
-                        <Link to="/">Home</Link>
-                    </li>
+
+                    <Link to="/"><li className='cursor-pointer btn'>
+                        Home
+                    </li></Link>
 
                     <li className='cursor-pointer btn'>
                         <Link to="/about">About</Link>
                     </li>
 
-                    <li className='cursor-pointer btn'>
-                        <Link to="/project">Project</Link>
-                    </li>
 
-                    <li className='cursor-pointer btn'>
-                        <Link to="/service">Services</Link>
+                    <Link to="/project"><li className='cursor-pointer btn'>
+                        Project
                     </li>
+                    </Link>
 
-                    <button className='px-6 py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                        <Link to="/contact">Contact</Link>
-                    </button>
+
+                    <Link to="/service"><li className='cursor-pointer btn'>
+                        Services
+                    </li></Link>
+
+
+                    <Link to="/contact"><button className='px-6 cursor-pointer py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
+                        Contact
+                    </button></Link>
 
                 </ul>
                 <div
@@ -184,9 +189,9 @@ const Nav = () => {
                             <Link to="/service">Services</Link>
                         </li>
 
-                        <button className='px-6 py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                            <Link to="/contact">Contact</Link>
-                        </button>
+
+                        <Link to="/contact"><button className='px-6 py-2 m-2 cursor-pointer bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
+                            Contact</button></Link>
 
                     </ul>
                 </div>

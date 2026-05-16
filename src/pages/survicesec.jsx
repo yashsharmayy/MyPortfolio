@@ -1,7 +1,7 @@
 import React from 'react'
 import Dropdown from '../components/Dropdown'
 
-const Survicesec = () => {
+const Survicesec = ({ w = "1/2" }) => {
     const servicesData = [
         {
             title: "FRONTEND DEVELOPMENT",
@@ -44,7 +44,7 @@ const Survicesec = () => {
 
     return (
         <div className=' lg:h-screen flex p-10 lg:p-20 items-center'>
-            <div className='lg:w-1/2 '>
+            <div className={`lg:w-${w} `}>
                 <h1 className='font-heading text-5xl md:text-7xl '>
                     what I can do for you
 
@@ -62,7 +62,6 @@ const Survicesec = () => {
                     )
                 })}
             </div>
-            <div className='lg:w-1/2'></div>
         </div>
     )
 }
