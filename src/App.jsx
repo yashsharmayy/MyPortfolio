@@ -1,5 +1,6 @@
 import React, { useContext, useEffect } from 'react'
 import Nav from './components/Nav'
+import bgvideo from './assets/bg2.mp4'
 import gsap from 'gsap'
 import { hoverContext } from './components/Context'
 import Lenis from 'lenis'
@@ -13,6 +14,11 @@ import Contact from './pages/main_page/Contact'
 import Home from './pages/main_page/Home'
 import Transition from './components/Transition'
 import ScrollToTop from './components/SrollToTop'
+
+import subimg01 from './assets/subimg01.png'
+import subimg02 from './assets/subimg02.png'
+import subimg03 from './assets/subimg03.png'
+import subimg04 from './assets/subimg04.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -81,22 +87,22 @@ const App = () => {
 
         {
           Active == 1 && (
-            <Imgcomp num={1} />
+            <Imgcomp imgpath={subimg01} />
           )
         }
         {
           Active == 2 && (
-            <Imgcomp num={2} />
+            <Imgcomp imgpath={subimg02} />
           )
         }
         {
           Active == 3 && (
-            <Imgcomp num={3} />
+            <Imgcomp imgpath={subimg03} />
           )
         }
         {
           Active == 4 && (
-            <Imgcomp num={4} />
+            <Imgcomp imgpath={subimg04} />
           )
         }
 
@@ -108,7 +114,7 @@ const App = () => {
         muted
         loop
         className='bgvideo'
-        src="src/assets/bg2.mp4"
+        src={bgvideo}
       ></video>
 
       <div className='w-full flex fixed z-50 items-center justify-center'>

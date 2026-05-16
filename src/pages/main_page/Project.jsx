@@ -37,7 +37,7 @@ const Project = () => {
                 <section className="py-20 px-4 md:px-10">
                     <div ref={headRef} className="max-w-350 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
-                        {/* Card 1 */}
+
                         <Procard
                             link={"https://yashsharmayy.github.io/Learnify/"}
                             proimg={subimg03}
@@ -74,7 +74,7 @@ const Project = () => {
                             }
                         />
 
-                        {/* Card 2 */}
+
 
                     </div>
                 </section>
