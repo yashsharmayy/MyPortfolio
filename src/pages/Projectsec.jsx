@@ -88,27 +88,27 @@ const Projectsec = ({ hide = "" }) => {
                 <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165 overflow-hidden">
                     <a href="https://yashsharmayy.github.io/Aurum_Luxe/">
                         <Card proname={"Aurum Luxe"} content={"Aurum Luxe is a modern jewellery website built with React, Tailwind CSS, and GSAP. It features a luxurious design, smooth animations, and a fully responsive layout for all devices."}
-                            img={pro1} />
+                            Cardimg={pro1} />
 
                     </a>
                     <a href="https://yashsharmayy.github.io/GYM_BRO/">
 
                         <Card proname={"GYM_BRO"} content={"A fully responsive gym website developed using React, enhanced with GSAP animations to deliver a dynamic and visually appealing user experience."}
-                            img={pro2} />
+                            Cardimg={pro2} />
 
                     </a>
                     <a href="https://yashsharmayy.github.io/MovieMasalaa/#/">
 
 
                         <Card proname={"Movie Masalaa"} content={"This is a Movie app in which you can search movie and its details , it,s a fully react based project"}
-                            img={pro3} />
+                            Cardimg={pro3} />
 
                     </a>
 
                     <a href="https://yashsharmayy.github.io/sundown/">
 
                         <Card proname={"Sundown Studio Clone"} content={"A modern and visually engaging frontend clone inspired by the Sundown Studio website. Built using HTML, CSS, and JavaScript with smooth animations, responsive layouts, and interactive UI elements."}
-                            img={pro4} />
+                            Cardimg={pro4} />
                     </a>
 
 

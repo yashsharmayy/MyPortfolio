@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useRef } from 'react'
 import { hoverContext } from './Context'
 import gsap from 'gsap'
 
-const Card = ({ proname, content, img }) => {
+const Card = ({ proname, content, Cardimg }) => {
 
     const { setprohover } = useContext(hoverContext)
     const headRef = useRef()
@@ -22,7 +22,7 @@ const Card = ({ proname, content, img }) => {
         <div onMouseOver={() => setprohover(true)} onMouseLeave={() => setprohover(false)} >
             <div className="card md:absolute relative z-20  top-10 translate-y-4 rounded-3xl overflow-hidden shadow-2xl">
 
-                <img className="w-full h-full object-cover" src={img} />
+                <img className="w-full h-full object-cover" src={Cardimg} />
 
                 <div className="hidden md:flex absolute top-10 bg-black/50 flex-col justify-end p-6">
                     <h2 className="text-3xl font-bold text-secondary ">{proname}</h2>
