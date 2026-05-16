@@ -1,16 +1,220 @@
-# React + Vite
+# 🚀 Yash Sharma Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive, and animation-rich portfolio website built using **React**, **Tailwind CSS**, **GSAP**, and **Vite**.  
+This portfolio represents my frontend development skills, creative UI design approach, and interactive web experiences.
 
-Currently, two official plugins are available:
+The website includes smooth page transitions, advanced animations, custom cursor effects, responsive layouts, and project showcases built with modern frontend technologies.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+# 🌐 Live Website
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🔗 https://yashsharmayy.github.io/MyPortfolio/
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# 📸 Preview
+
+![Portfolio Preview](./src/assets/pro1.png)
+
+---
+
+# ✨ Features
+
+## 🎨 Modern UI Design
+
+- Clean and minimal interface
+- Creative layouts
+- Smooth visual hierarchy
+- Modern typography and spacing
+
+---
+
+## ⚡ GSAP Animations
+
+- Scroll-triggered animations
+- Smooth page transitions
+- Interactive hover effects
+- Animated cards and sections
+- Loading screen animations
+
+---
+
+## 🖱️ Custom Cursor
+
+- Dynamic animated cursor
+- Hover interactions
+- Project preview cursor effects
+
+---
+
+## 📱 Fully Responsive
+
+- Mobile-friendly design
+- Tablet optimized
+- Desktop responsive layouts
+- Adaptive typography and spacing
+
+---
+
+## 🚀 Smooth Scrolling
+
+Implemented using **Lenis** for premium smooth scroll experience.
+
+---
+
+## 🧩 Reusable Components
+
+- Navbar
+- Buttons
+- Project Cards
+- Dropdowns
+- Animated Sections
+- Footer
+- Transition Loader
+
+---
+
+## 🌙 Interactive Experience
+
+- Smooth navigation
+- Animated menus
+- Hover interactions
+- Transition effects between pages
+
+---
+
+# 🛠️ Technologies Used
+
+| Technology       | Purpose            |
+| ---------------- | ------------------ |
+| React.js         | Frontend Framework |
+| Tailwind CSS     | Styling            |
+| GSAP             | Animations         |
+| Vite             | Build Tool         |
+| React Router DOM | Routing            |
+| Lenis            | Smooth Scrolling   |
+| JavaScript       | Functionality      |
+
+---
+
+# 📂 Folder Structure
+
+```bash
+src/
+│
+├── assets/              # Images & Videos
+├── components/          # Reusable Components
+├── pages/               # Website Pages
+│
+├── App.jsx
+├── main.jsx
+└── index.css
+```
+
+---
+
+# 📄 Pages Included
+
+- Home
+- About
+- Projects
+- Services
+- Contact
+
+---
+
+# 📸 Featured Projects
+
+## 💎 Aurum Luxe
+
+A luxury jewellery website built with React and GSAP featuring premium UI and animations.
+
+### Features:
+
+- Smooth animations
+- Responsive design
+- Modern luxury aesthetics
+- Interactive UI
+
+---
+
+## 🏋️ GYM_BRO
+
+A modern gym website built using React and GSAP with energetic design and smooth transitions.
+
+---
+
+## 🎬 Movie Masalaa
+
+A React movie application where users can search movies and explore details dynamically.
+
+---
+
+## ☕ Coffee Website
+
+A stylish coffee landing page created using HTML, CSS, and JavaScript.
+
+---
+
+## 🌦️ Weather App
+
+A responsive weather application using API integration to display real-time weather data.
+
+---
+
+## 🐍 Snake Game
+
+Classic snake game built using JavaScript with game logic and DOM manipulation.
+
+---
+
+## Router Setup
+
+```jsx
+<HashRouter>
+  <App />
+</HashRouter>
+```
+
+---
+
+# 📈 Performance Optimizations
+
+- Optimized animations
+- Reusable React components
+- Efficient rendering
+- Responsive image handling
+- Smooth scrolling optimization
+
+---
+
+# 🎯 Future Improvements
+
+- Dark/Light theme toggle
+- Backend contact form integration
+- Blog section
+- More interactive animations
+- Project filtering system
+- CMS integration
+
+---
+
+# 📬 Contact
+
+## 👨‍💻 Yash Sharma
+
+- GitHub: https://github.com/yashsharmayy
+- Portfolio: https://yashsharmayy.github.io/MyPortfolio/
+
+---
+
+# ⭐ Credits
+
+Designed and developed by **Yash Sharma** using React, Tailwind CSS, and GSAP.
+
+---
+
+# 📜 License
+
+This project is open source and available under the MIT License.

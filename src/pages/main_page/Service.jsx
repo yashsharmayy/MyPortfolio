@@ -22,14 +22,28 @@ const Service = () => {
     }, [])
     return (
         <div className='pt-20'>
-            <div className='flex md:flex-row flex-col-reverse justify-evenly items-center'>
+            <div className='flex flex-col-reverse lg:flex-row items-center justify-between gap-10 px-4 md:px-10 lg:px-20 overflow-hidden'>
 
-                <Survicesec w={"full"} />
-                <div ref={headRef} className='heroprofile w-55 h-75  md:w-75 md:h-95 lg:w-85 lg:h-120 overflow-hidden rounded-3xl'>
+                {/* Left Content */}
+                <div className='w-full lg:w-[60%]'>
+                    <Survicesec w={"full"} />
+                </div>
+
+                {/* Right Image */}
+                <div
+                    ref={headRef}
+                    className='heroprofile 
+        w-52 h-72
+        sm:w-60 sm:h-80
+        md:w-72 md:h-96
+        lg:w-85 lg:h-128
+        overflow-hidden rounded-3xl shrink-0'
+                >
 
                     <img
-                        className='  w-full h-full  object-cover'
-                        src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile"
+                        className='w-full h-full object-cover'
+                        src="https://images.unsplash.com/photo-1547658719-da2b51169166?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                        alt="profile"
                     />
                 </div>
             </div>

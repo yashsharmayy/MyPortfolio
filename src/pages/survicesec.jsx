@@ -59,24 +59,54 @@ const Survicesec = ({ w = "1/2" }) => {
 
 
     return (
-        <div className=' lg:h-screen flex p-10 lg:p-20 items-center'>
-            <div ref={headRef} className={`lg:w-${w} `}>
-                <h1 className='font-heading text-5xl md:text-7xl '>
-                    what I can do for you
+        <div className='w-full flex items-center px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-16'>
 
+            <div
+                ref={headRef}
+                className={`w-full ${w === "full" ? "lg:w-full" : `lg:w-${w}`}`}
+            >
+
+                <h1 className='
+            font-heading
+            text-3xl
+            sm:text-5xl
+            md:text-6xl
+            lg:text-7xl
+            leading-none
+            wrap-break-word
+        '>
+                    what I can do for you
                 </h1>
 
-                <p className=' md:text-lg lg:text-xl mt-4  w-100 lg:w-full'>
+                <p className='
+            text-sm
+            sm:text-base
+            md:text-lg
+            lg:text-xl
+            mt-4
+            w-full
+            max-w-2xl
+            text-gray-300
+        '>
                     I develop responsive websites and manage website hosting to ensure smooth performance.
                 </p>
-                {servicesData.map((section, idx) => {
-                    return (
 
+                <div className='mt-8'>
+                    {servicesData.map((section, idx) => {
+                        return (
+                            <Dropdown
+                                key={idx}
+                                idx={idx + 1}
+                                heading={section.title}
+                                content1={section.items[0]}
+                                content2={section.items[1]}
+                                content3={section.items[2]}
+                                content4={section.items[3]}
+                            />
+                        )
+                    })}
+                </div>
 
-                        <Dropdown key={idx} idx={idx + 1} heading={section.title} content1={section.items[0]} content2={section.items[1]} content3={section.items[2]} content4={section.items[3]} />
-
-                    )
-                })}
             </div>
         </div>
     )
