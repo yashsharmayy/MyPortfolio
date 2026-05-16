@@ -1,6 +1,7 @@
 import React from 'react'
 import Projectsec from '../Projectsec'
 import Footer from '../Footer'
+import Procard from '../../components/Procard'
 
 const Project = () => {
     return (
@@ -17,132 +18,43 @@ const Project = () => {
                     <div className="max-w-350 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
                         {/* Card 1 */}
-                        <a
-                            href="https://yashsharmayy.github.io/Aurum_Luxe/"
-                            target="_blank"
-                            className="group"
-                        >
-                            <div className="overflow-hidden rounded-4xl">
-                                <img
-                                    src="/src/assets/pro1.png"
-                                    alt="Aurum Luxe"
-                                    className="w-full h-36 md:h-88 object-cover group-hover:scale-105 duration-500"
-                                />
-                            </div>
-
-                            <div className="mt-6">
-
-                                <span className="border border-lime-400 text-lime-400 px-5 py-2 rounded-full text-sm">
-                                    React Project
-                                </span>
-
-                                <h1 className="text-4xl md:text-6xl font-heading uppercase mt-6 leading-none">
-                                    Aurum Luxe
-                                </h1>
-
-                                <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-                                    A modern jewellery website built with React, Tailwind CSS,
-                                    and GSAP featuring smooth animations, premium visuals,
-                                    and fully responsive layouts.
-                                </p>
-
-                            </div>
-                        </a>
-
-                        {/* Card 2 */}
-                        <a
-                            href="https://yashsharmayy.github.io/GYM_BRO/"
-                            target="_blank"
-                            className="group"
-                        >
-                            <div className="overflow-hidden rounded-4xl">
-                                <img
-                                    src="/src/assets/pro2.png"
-                                    alt="GYM BRO"
-                                    className="w-full h-36 md:h-88 object-cover group-hover:scale-105 duration-500"
-                                />
-                            </div>
-
-                            <div className="mt-6">
-
-                                <span className="border border-lime-400 text-lime-400 px-5 py-2 rounded-full text-sm">
-                                    React + GSAP
-                                </span>
-
-                                <h1 className="text-4xl md:text-6xl font-heading uppercase mt-6 leading-none">
-                                    GYM BRO
-                                </h1>
-
-                                <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-                                    A fully responsive gym website developed using React and GSAP
-                                    animations to create an engaging and energetic user experience.
-                                </p>
-
-                            </div>
-                        </a>
-                        <a
-                            href="https://yashsharmayy.github.io/Aurum_Luxe/"
-                            target="_blank"
-                            className="group"
-                        >
-                            <div className="overflow-hidden rounded-4xl">
-                                <img
-                                    src="/src/assets/pro1.png"
-                                    alt="Aurum Luxe"
-                                    className="w-full h-36 md:h-88 object-cover group-hover:scale-105 duration-500"
-                                />
-                            </div>
-
-                            <div className="mt-6">
-
-                                <span className="border border-lime-400 text-lime-400 px-5 py-2 rounded-full text-sm">
-                                    React Project
-                                </span>
-
-                                <h1 className="text-4xl md:text-6xl font-heading uppercase mt-6 leading-none">
-                                    Aurum Luxe
-                                </h1>
-
-                                <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-                                    A modern jewellery website built with React, Tailwind CSS,
-                                    and GSAP featuring smooth animations, premium visuals,
-                                    and fully responsive layouts.
-                                </p>
-
-                            </div>
-                        </a>
+                        <Procard
+                            link={"https://yashsharmayy.github.io/Learnify/"}
+                            proimg={"subimg03"}
+                            subname={"HTML • CSS • JavaScript • GSAP"}
+                            name={"Liernify"}
+                            discription={
+                                "A modern and responsive coffee shop landing page featuring a clean UI, stylish coffee-themed design, responsive layout, and interactive sections built using HTML, CSS, and JavaScript."
+                            }
+                        />
+                        <Procard
+                            link={"https://yashsharmayy.github.io/Frontend_project/snake-game/snake.html"}
+                            proimg={"subimg04"}
+                            subname={"JavaScript"}
+                            name={"Snake Game"}
+                            discription={
+                                "A classic Snake Game built using HTML, CSS, and JavaScript.This project helped me understand core game logic, DOM manipulation, and state management in JavaScript."}
+                        />
+                        <Procard
+                            link={"https://yashsharmayy.github.io/coffee/"}
+                            proimg={"subimg001"}
+                            subname={"HTML • CSS • JavaScript"}
+                            name={"Coffee Website"}
+                            discription={
+                                "A modern and responsive coffee shop landing page featuring a clean UI, stylish coffee-themed design, responsive layout, and interactive sections built using HTML, CSS, and JavaScript."
+                            }
+                        />
+                        <Procard
+                            link={"https://yashsharmayy.github.io/Frontend_project/weather%20app/weather.html"}
+                            proimg={"subimg02"}
+                            subname={"HTML • CSS • JavaScript"}
+                            name={"Weather App"}
+                            discription={
+                                "A modern weather application that provides real-time weather updates, temperature, humidity, and wind details using API integration with a clean and responsive user interface."
+                            }
+                        />
 
                         {/* Card 2 */}
-                        <a
-                            href="https://yashsharmayy.github.io/GYM_BRO/"
-                            target="_blank"
-                            className="group"
-                        >
-                            <div className="overflow-hidden rounded-4xl">
-                                <img
-                                    src="/src/assets/pro2.png"
-                                    alt="GYM BRO"
-                                    className="w-full h-36 md:h-88 object-cover group-hover:scale-105 duration-500"
-                                />
-                            </div>
-
-                            <div className="mt-6">
-
-                                <span className="border border-lime-400 text-lime-400 px-5 py-2 rounded-full text-sm">
-                                    React + GSAP
-                                </span>
-
-                                <h1 className="text-4xl md:text-6xl font-heading uppercase mt-6 leading-none">
-                                    GYM BRO
-                                </h1>
-
-                                <p className="mt-5 text-lg text-gray-300 leading-relaxed">
-                                    A fully responsive gym website developed using React and GSAP
-                                    animations to create an engaging and energetic user experience.
-                                </p>
-
-                            </div>
-                        </a>
 
                     </div>
                 </section>

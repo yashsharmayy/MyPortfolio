@@ -98,7 +98,7 @@ const Projectsec = ({ hide = "" }) => {
             <section className="w-full flex m-auto md:my-20  justify-center">
                 <div className={`my-10 ${hide} `}>
 
-                    <Button text={"Browse all projects"} />
+                    <Button link="/project" text={"Browse all projects"} />
                 </div>
             </section>
         </div>

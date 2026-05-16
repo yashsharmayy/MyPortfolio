@@ -1,16 +1,21 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import heroimg from '../assets/heroimg4.png'
 import gsap from 'gsap'
-import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import { hoverContext } from './Context'
 
 const Nav = () => {
 
+    const { setpagechange } = useContext(hoverContext)
+
+    const navigate = useNavigate()
+
     const [Scrolldirc, setScrolldirc] = useState("up")
     const [open, setopen] = useState(false)
+
     useEffect(() => {
 
         let lastscroll = window.scrollY
-
 
         const handleScroll = () => {
 
@@ -32,9 +37,7 @@ const Nav = () => {
 
         return () => {
             window.removeEventListener("scroll", handleScroll)
-            setopen(false)
         }
-
 
     }, [])
 
@@ -44,7 +47,6 @@ const Nav = () => {
             display: "flex"
         })
 
-
         if (window.innerWidth >= 720) {
 
             if (Scrolldirc === "down") {
@@ -53,7 +55,6 @@ const Nav = () => {
                     opacity: 1,
                     scaleX: 1,
                     width: "auto",
-
                     duration: 0.4,
                     ease: "power2.out"
                 })
@@ -64,10 +65,10 @@ const Nav = () => {
                     width: 0,
                     duration: 0.4,
                     ease: "power2.out"
-
                 })
 
             } else {
+
                 gsap.to(".openwork", {
                     opacity: 0,
                     scaleX: 0,
@@ -75,7 +76,6 @@ const Nav = () => {
                     duration: 0.4,
                     ease: "power2.out"
                 })
-
 
                 gsap.to(".navbar", {
                     opacity: 1,
@@ -85,15 +85,16 @@ const Nav = () => {
                     ease: "power2.out"
                 })
             }
-        } else {
-
         }
 
     }, [Scrolldirc])
 
-    let menu = () => {
+    const menu = () => {
+
         setopen(!open)
+
         if (!open) {
+
             gsap.to(".menu", {
                 y: 20,
                 opacity: 1,
@@ -101,7 +102,9 @@ const Nav = () => {
                 pointerEvents: "auto",
                 duration: 0.4,
             })
+
         } else {
+
             gsap.to(".menu", {
                 y: -20,
                 width: "0%",
@@ -112,90 +115,144 @@ const Nav = () => {
         }
     }
 
+    const handleNavigation = (path) => {
 
+        setpagechange(true)
 
+        setopen(false)
 
+        gsap.to(".menu", {
+            y: -20,
+            width: "0%",
+            opacity: 0,
+            pointerEvents: "none",
+            duration: 0.4,
+        })
 
+        setTimeout(() => {
+            navigate(path)
+        }, 1200)
+    }
 
     return (
 
-        <div className='relative w-full top-0 left-0  z-50 flex flex-col justify-center items-center mt-4 text-white '>
+        <div className='relative w-full top-0 left-0 z-50 flex flex-col justify-center items-center mt-4 text-white'>
 
             <div className='flex w-fit bg-black/90 items-center justify-center rounded-full px-2'>
 
-                <div className='logo w-12 h-12 rounded-full overflow-hidden  m-2'>
+                {/* Logo */}
+                <div className='logo w-12 h-12 rounded-full overflow-hidden m-2'>
+
                     <img
                         className='w-full h-full object-cover object-top'
                         src={heroimg}
                         alt="profile"
                     />
+
                 </div>
 
-                <div
-                    className='openwork flex items-center whitespace-nowrap origin-left px-2'                >
+                {/* Mobile Top Bar */}
+                <div className='openwork flex items-center whitespace-nowrap origin-left px-2'>
+
                     <span>Available for work</span>
 
                     <span className='w-2 h-2 rounded-full mx-4 bg-green-400'></span>
-                    <i onClick={menu} className="fa-solid fa-bars-staggered cursor-pointer text-secondary text-xl mx-2"></i>
+
+                    <i
+                        onClick={menu}
+                        className="fa-solid fa-bars-staggered cursor-pointer text-secondary text-xl mx-2"
+                    ></i>
+
                 </div>
 
-                {/* Nav */}
-                <ul className='navbar hidden md:flex  mx-2 gap-6 items-center'>
+                {/* Desktop Nav */}
+                <ul className='navbar hidden md:flex mx-2 gap-6 items-center'>
 
-
-                    <Link to="/"><li className='cursor-pointer btn'>
+                    <li
+                        onClick={() => handleNavigation("/")}
+                        className='cursor-pointer btn'
+                    >
                         Home
-                    </li></Link>
-
-                    <li className='cursor-pointer btn'>
-                        <Link to="/about">About</Link>
                     </li>
 
+                    <li
+                        onClick={() => handleNavigation("/about")}
+                        className='cursor-pointer btn'
+                    >
+                        About
+                    </li>
 
-                    <Link to="/project"><li className='cursor-pointer btn'>
+                    <li
+                        onClick={() => handleNavigation("/project")}
+                        className='cursor-pointer btn'
+                    >
                         Project
                     </li>
-                    </Link>
 
-
-                    <Link to="/service"><li className='cursor-pointer btn'>
+                    <li
+                        onClick={() => handleNavigation("/service")}
+                        className='cursor-pointer btn'
+                    >
                         Services
-                    </li></Link>
+                    </li>
 
-
-                    <Link to="/contact"><button className='px-6 cursor-pointer py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
+                    <button
+                        onClick={() => handleNavigation("/contact")}
+                        className='px-6 cursor-pointer py-2 m-2 bg-lime-300 text-black rounded-full hover:scale-105 transition-all'
+                    >
                         Contact
-                    </button></Link>
+                    </button>
 
                 </ul>
+
+                {/* Mobile Menu */}
                 <div
-                    className={`menu flex-col absolute top-0 px-20 mt-15 bg-black/90 rounded-3xl p-6
-                         opacity-0 w-0 pointer-events-none`}
+                    className='menu flex-col absolute top-0 px-20 mt-15 bg-black/90 rounded-3xl p-6 opacity-0 w-0 pointer-events-none'
                 >
-                    <ul className='flex flex-col  gap-6 items-center'>
-                        <li className='cursor-pointer btn'>
-                            <Link to="/">Home</Link>
+
+                    <ul className='flex flex-col gap-6 items-center'>
+
+                        <li
+                            onClick={() => handleNavigation("/")}
+                            className='cursor-pointer btn'
+                        >
+                            Home
                         </li>
 
-                        <li className='cursor-pointer btn'>
-                            <Link to="/about">About</Link>
+                        <li
+                            onClick={() => handleNavigation("/about")}
+                            className='cursor-pointer btn'
+                        >
+                            About
                         </li>
 
-                        <li className='cursor-pointer btn'>
-                            <Link to="/project">Project</Link>
+                        <li
+                            onClick={() => handleNavigation("/project")}
+                            className='cursor-pointer btn'
+                        >
+                            Project
                         </li>
 
-                        <li className='cursor-pointer btn'>
-                            <Link to="/service">Services</Link>
+                        <li
+                            onClick={() => handleNavigation("/service")}
+                            className='cursor-pointer btn'
+                        >
+                            Services
                         </li>
 
-
-                        <Link to="/contact"><button className='px-6 py-2 m-2 cursor-pointer bg-lime-300 text-black rounded-full hover:scale-105 transition-all'>
-                            Contact</button></Link>
+                        <button
+                            onClick={() => handleNavigation("/contact")}
+                            className='px-6 py-2 m-2 cursor-pointer bg-lime-300 text-black rounded-full hover:scale-105 transition-all'
+                        >
+                            Contact
+                        </button>
 
                     </ul>
+
                 </div>
+
             </div>
+
         </div>
     )
 }

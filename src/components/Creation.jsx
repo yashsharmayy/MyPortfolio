@@ -14,8 +14,8 @@ const Creation = () => {
                     num={"01"}
                     head={"Planning & Research"}
                     para={"I start by understanding project goals, user needs, and website structure before development begins."}
-                    bgColor={"prime"}
-                    textColor={"bg-default"}
+
+
                 />
 
                 <Stepimg
@@ -26,7 +26,7 @@ const Creation = () => {
                     num={"02"}
                     head={"UI Design & Inspiration"}
                     para={"I create clean and modern layouts focused on visual appeal, readability, and smooth user experience."}
-                    bgColor={"secondary"}
+                    bgcolor={"secondary"}
                     textColor={"bg-default"}
                 />
 
@@ -34,8 +34,8 @@ const Creation = () => {
                     num={"03"}
                     head={"Frontend Development"}
                     para={"Using React, Tailwind CSS, JavaScript, and GSAP, I build responsive and interactive interfaces."}
-                    bgColor={"bg-default"}
-                    textColor={"prime"}
+                    bgcolor={"black"}
+                    textColor={"primery"}
                 />
 
                 <div className='lg:col-span-2'>
@@ -43,7 +43,7 @@ const Creation = () => {
                         num={"04"}
                         head={"Animation & Responsiveness"}
                         para={"I add smooth animations, responsive behavior, and optimize performance across all devices."}
-                        bgColor={"secondary"}
+                        bgcolor={"secondary"}
                         textColor={"bg-default"}
                     />
                 </div>
@@ -59,7 +59,6 @@ const Creation = () => {
                         num={"05"}
                         head={"Testing & Launch"}
                         para={"Before delivery, I test the website for responsiveness, performance, and smooth functionality."}
-                        bgColor={"prime"}
                         textColor={"bg-default"}
                     />
                 </div>

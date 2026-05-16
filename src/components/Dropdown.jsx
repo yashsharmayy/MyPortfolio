@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { hoverContext } from './Contexthover'
+import { hoverContext } from './Context'
 
 const Dropdown = ({ heading, idx, content1, content2, content3, content4 }) => {
     const { setActive } = useContext(hoverContext)

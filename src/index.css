@@ -19,9 +19,16 @@ html.lenis body {
   --font-body: "DM Sans", sans-serif;
   --font-alt: "Oswald", sans-serif;
 }
+@source inline("bg-white");
+@source inline("bg-black");
+@source inline("bg-secondary");
 
+@source inline("text-white");
+@source inline("text-black");
+@source inline("text-bg-default");
+@source inline("text-primery");
 @theme {
-  --color-prime: #ffffff;
+  --color-primery: #ffffff;
   --color-prime2: #cfd1cc;
   --color-prime3: #f2f2f2;
   --color-secondary: #d0ff71;
@@ -43,8 +50,8 @@ html.lenis body {
   z-index: -1;
 }
 body {
-  background-color: var(--color-prime);
-  color: var(--color-prime);
+  background-color: var(--color-primery);
+  color: var(--color-primery);
   font: var(--font-body);
   box-sizing: border-box;
   position: relative;
@@ -99,4 +106,28 @@ body {
 }
 .storybtn:hover a {
   color: var(--color-bg-default);
+}
+
+/* page transiton */
+.transiton {
+  display: flex;
+  flex: 1;
+  width: 100%;
+}
+.row1 .block {
+  transform-origin: top;
+  background-color: #a3e635;
+  /* border: 1px solid black; */
+}
+.row2 .block {
+  transform-origin: bottom;
+  background-color: black;
+  /* border: 1px solid var(--color-secondary); */
+}
+
+.block {
+  flex: 1;
+  width: 100%;
+  transform: scale(1);
+  will-change: transform;
 }

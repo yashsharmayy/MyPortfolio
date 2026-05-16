@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { hoverContext } from './Contexthover'
+import { hoverContext } from './Context'
 
 const Card = ({ proname, content, img }) => {
 
