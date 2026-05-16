@@ -1,10 +1,25 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
 import Button from '../components/Button'
+import gsap from 'gsap'
 
 const Form = () => {
 
     const formRef = useRef()
+
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
 
     const [notification, setNotification] = useState("")
 
@@ -40,6 +55,7 @@ const Form = () => {
             })
     }
 
+
     return (
         <div className="relative">
 
@@ -58,7 +74,7 @@ const Form = () => {
                 className="h-full w-full text-secondary px-10 md:px-20 flex items-center justify-center"
             >
 
-                <div className="w-full max-w-6xl text-lg">
+                <div ref={headRef} className="w-full max-w-6xl text-lg">
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
 

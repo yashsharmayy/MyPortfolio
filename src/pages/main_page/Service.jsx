@@ -1,15 +1,31 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Survicesec from '../survicesec'
 import Footer from '../Footer'
 import Creation from '../../components/Creation'
+import gsap from 'gsap'
 
 const Service = () => {
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            scale: 0,
+            delay: 1.1,
+            rotateY: 180,
+            opacity: 0,
+            duration: 0.8,
+
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
     return (
         <div className='pt-20'>
             <div className='flex md:flex-row flex-col-reverse justify-evenly items-center'>
 
                 <Survicesec w={"full"} />
-                <div className='heroprofile w-55 h-75  md:w-75 md:h-95 lg:w-85 lg:h-120 overflow-hidden rounded-3xl'>
+                <div ref={headRef} className='heroprofile w-55 h-75  md:w-75 md:h-95 lg:w-85 lg:h-120 overflow-hidden rounded-3xl'>
 
                     <img
                         className='  w-full h-full  object-cover'

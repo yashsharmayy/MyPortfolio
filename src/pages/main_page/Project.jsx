@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Projectsec from '../Projectsec'
 import Footer from '../Footer'
 import Procard from '../../components/Procard'
+import gsap from 'gsap'
 
 const Project = () => {
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
     return (
         <div>
             <Projectsec hide={"hidden"} />
@@ -15,7 +29,7 @@ const Project = () => {
                 </h1>
                 <hr className='text-white' />
                 <section className="py-20 px-4 md:px-10">
-                    <div className="max-w-350 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div ref={headRef} className="max-w-350 mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
 
                         {/* Card 1 */}
                         <Procard

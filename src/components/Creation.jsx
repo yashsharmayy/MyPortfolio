@@ -1,14 +1,29 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Heading from './Heading'
 import StepCard from './StepCard'
 import Stepimg from './stepimg'
+import gsap from 'gsap'
 
 const Creation = () => {
+
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
     return (
         <div className='p-20'>
             <Heading head={"Build Modern Websites with Creativity & Precision"}
                 para={"I combine clean design, smooth animations, and modern frontend development to create websites that feel interactive, responsive, and visually engaging."} />
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20'>
+            <div ref={headRef} className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-20'>
 
                 <StepCard
                     num={"01"}

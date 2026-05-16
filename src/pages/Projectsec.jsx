@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Button from "../components/Button";
@@ -8,6 +8,21 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 const Projectsec = ({ hide = "" }) => {
+
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
+
     useEffect(() => {
         const cards = gsap.utils.toArray(".card");
 
@@ -52,8 +67,8 @@ const Projectsec = ({ hide = "" }) => {
     return (
         <div className="text-white h-full my-8">
 
-            {/* Top */}
-            <section className="flex flex-col items-start p-10 md:p-20">
+
+            <section ref={headRef} className="flex flex-col items-start p-10 md:p-20">
                 <h1 className="font-heading text-5xl md:text-7xl">
                     Featured Projects
                 </h1>
@@ -63,7 +78,7 @@ const Projectsec = ({ hide = "" }) => {
                 </p>
             </section>
 
-            {/* Cards */}
+
             <section className="cards-section py-20 flex justify-center">
 
                 <div className="relative w-[80%] md:w-220 lg:w-270 md:h-145 lg:h-165 overflow-hidden">

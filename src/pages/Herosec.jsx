@@ -9,6 +9,9 @@ const Herosec = () => {
 
     gsap.registerPlugin(ScrollTrigger);
     let heroimgRef = useRef()
+    let head1Ref = useRef()
+    let head2Ref = useRef()
+
 
     useEffect(() => {
 
@@ -50,10 +53,29 @@ const Herosec = () => {
 
     }, []);
 
+    useEffect(() => {
+        gsap.from(head1Ref.current, {
+            delay: 1.2,
+            x: -100,
+            opacity: 0,
+        })
+        gsap.from(head2Ref.current, {
+            delay: 1.2,
+            x: 100,
+            opacity: 0,
+        })
+        gsap.from(heroimgRef.current, {
+            delay: 1.2,
+            rotateY: "360deg",
+            scale: 0,
+            opacity: 0,
+        })
+    }, [])
+
     return (
         <div className='w-full   mt-25  overflow-x-hidden flex flex-col lg:flex-row items-center justify-center px-6 md:px-10 lg:px-20 h-auto min-h-[88vh]'>
 
-            <div className='w-full lg:mb-30 text-center md:text-left md:mb-10 '>
+            <div ref={head1Ref} className='w-full lg:mb-30 text-center md:text-left md:mb-10 '>
                 <h2 className='font-heading text-2xl md:text-4xl'>Yash Sharma</h2>
                 <h1 className='font-heading text-5xl md:text-7xl lg:text-9xl'>
                     Frontend
@@ -71,7 +93,7 @@ const Herosec = () => {
 
             </div>
 
-            <div className='w-full text-center md:text-right'>
+            <div ref={head2Ref} className='w-full text-center md:text-right'>
                 <h1 className='font-heading text-5xl md:text-7xl lg:text-9xl'>
                     Developer
                 </h1>

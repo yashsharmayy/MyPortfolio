@@ -1,7 +1,23 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Dropdown from '../components/Dropdown'
+import gsap from 'gsap'
 
 const Survicesec = ({ w = "1/2" }) => {
+
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
+
     const servicesData = [
         {
             title: "FRONTEND DEVELOPMENT",
@@ -44,7 +60,7 @@ const Survicesec = ({ w = "1/2" }) => {
 
     return (
         <div className=' lg:h-screen flex p-10 lg:p-20 items-center'>
-            <div className={`lg:w-${w} `}>
+            <div ref={headRef} className={`lg:w-${w} `}>
                 <h1 className='font-heading text-5xl md:text-7xl '>
                     what I can do for you
 

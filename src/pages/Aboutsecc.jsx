@@ -1,14 +1,28 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import Dropdown from '../components/Dropdown'
 import Button from '../components/Button'
 import Icons from '../components/Icons'
 import Heading from '../components/Heading'
+import gsap from 'gsap'
 
 const Aboutsec = ({ w = "1/2", hide = "" }) => {
     const [year, setYear] = useState(0)
     const [projects, setProjects] = useState(0)
     const [tech, setTech] = useState(0)
 
+    const headRef = useRef()
+    useEffect(() => {
+        gsap.from(headRef.current.children, {
+            y: 60,
+            opacity: 0,
+            duration: 0.8,
+            stagger: 0.2,
+            scrollTrigger: {
+                trigger: headRef.current,
+                start: "top 50%"
+            }
+        })
+    }, [])
 
     useEffect(() => {
         let y = 0, p = 0, t = 0;
@@ -43,7 +57,7 @@ const Aboutsec = ({ w = "1/2", hide = "" }) => {
 
     return (
         <div className=' h-full flex p-10 lg:p-20 overflow-x-hidden items-center'>
-            <div className={`lg:w-${w} flex flex-col text-center items-center md:text-left md:items-start`}>
+            <div ref={headRef} className={`lg:w-${w} flex flex-col text-center items-center md:text-left md:items-start`}>
                 <Heading head={"About me"} para={" Hi, I'm Yash — a frontend developer and digital designer passionate about building modern and impactful web experiences."} />
                 <div className='flex md:flex-row flex-col gap-6 my-4'>
                     <div>

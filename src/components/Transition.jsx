@@ -35,14 +35,14 @@ const Transition = () => {
         })
 
         tl.to(Row1ref.current.children, {
-            y: 800,
+            y: 1000,
             stagger: -0.2,
             duration: 1,
             ease: "power3.inOut"
         })
 
             .to(Row2ref.current.children, {
-                y: -800,
+                y: -1000,
                 stagger: 0.2,
                 duration: 1,
                 ease: "power3.inOut"
@@ -56,11 +56,11 @@ const Transition = () => {
         })
 
         gsap.set(Row1ref.current.children, {
-            y: -800
+            y: -1000
         })
 
         gsap.set(Row2ref.current.children, {
-            y: 800
+            y: 1000
         })
 
         const tl = gsap.timeline({

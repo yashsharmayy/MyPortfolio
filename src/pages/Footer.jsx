@@ -43,7 +43,7 @@ const Footer = () => {
                 <div className="flex flex-col md:flex-row items-center justify-between gap-6 pt-8">
 
                     <p className="text-lg">
-                        © Copyright 2025. All Rights Reserved by{" "}
+                        © Copyright 2026. All Rights Reserved by{" "}
                         <span className="font-semibold underline">
                             weblysite
                         </span>
