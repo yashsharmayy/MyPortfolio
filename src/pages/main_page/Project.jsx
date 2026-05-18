@@ -25,7 +25,7 @@ const Project = () => {
         })
     }, [])
     return (
-        <div>
+        <div className='lg:mt-30 mt-30'>
             <Projectsec hide={"hidden"} />
 
             <div className='px-20 '>
