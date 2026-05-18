@@ -1,14 +1,19 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import Dropdown from '../components/Dropdown'
 import Button from '../components/Button'
 import Icons from '../components/Icons'
 import Heading from '../components/Heading'
 import gsap from 'gsap'
+import ScrollToTop from '../components/SrollToTop'
+import { hoverContext } from '../components/Context'
 
 const Aboutsec = ({ w = "1/2", hide = "" }) => {
     const [year, setYear] = useState(0)
     const [projects, setProjects] = useState(0)
     const [tech, setTech] = useState(0)
+
+    const { setpagechange } = useContext(hoverContext)
+
 
     const headRef = useRef()
     useEffect(() => {
@@ -86,7 +91,7 @@ const Aboutsec = ({ w = "1/2", hide = "" }) => {
                 <Icons color={'white'} />
                 <div className={`my-10 ${hide} `}>
 
-                    <Button link={"/about"} text={"my story"} />
+                    <Button onclick={() => { setpagechange(true) }} link={"#about"} text={"my story"} />
                 </div>
 
             </div>
